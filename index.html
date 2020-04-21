@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>COVID19 Tracker</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <span id="date"></span>
+    <br>
+    <!-- live icon here -->
+    <span id="clock"></span>
+    <span>IST</span>
+  
+    <h1 id="india-heading">Coronavirus India Statistics</h1>
+
+    <div class="stats-india">
+        <div class="samples">
+            <h2>Samples Tested</h2>
+            <h2 class="countryVal">33452</h2>
+        </div>
+        <div class="confirmed">
+            <h2>Confirmed</h2>
+            <h2 class="countryVal">12423</h2>
+        </div>
+        <div class="indians">
+            <h2>Indians</h2>
+            <h2 class="countryVal">10458</h2>
+        </div>
+        <div class="foreign">
+            <h2>Foreigners</h2>
+            <h2 class="countryVal">753</h2>
+        </div>
+        <div class="discharged">
+            <h2>Discharged</h2>
+            <h2 class="countryVal">63</h2>
+        </div>
+        <div class="deaths">
+            <h2>Deaths</h2>
+            <h2 class="countryVal">452</h2>
+        </div>
+    </div>
+
+    <!-- state choice menu -->
+    <select id="select-region" class="custom-select custom-select-lg mb-3" name="stateSelector">
+        <option value="">Select Your Region</option>
+    </select>
+    <!-- show the below data after user selects state -->
+    <div class="show-after-state-select">
+        <h1 id="selected-state"></h1>
+        <div class="state-stats">
+            <div class="stateTotalConfirmed">
+                <h2>Confirmed</h2>
+                <h2 class="statsVal"></h2>
+            </div>
+            <div class="stateIndians">
+                <h2>Indians</h2>
+                <h2 class="statsVal"></h2>
+            </div>
+            <div class="stateForeign">
+                <h2>Foreigners</h2>
+                <h2 class="statsVal"></h2>
+            </div>
+            <div class="stateDischarge">
+                <h2>Discharged</h2>
+                <h2 class="statsVal"></h2>
+            </div>
+            <div class="stateDeaths">
+                <h2>Deaths</h2>
+                <h2 class="statsVal"></h2>
+            </div>
+        </div>
+
+        <!-- district stats table -->
+        <div class="district-stats">
+            <table class="table" id="sortableTable">
+                <thead>
+                    <tr>
+                        <th scope="col">District</th>
+                        <th scope="col">Confirmed</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+
+        <!-- resources choice menu -->
+        <select id="select-resource" class="custom-select custom-select-lg mb-3" name="resourceSelector">
+            <option value="">Select Resource To View</option>
+        </select>
+        <div class="show-after-resource-select">
+            <h1 class="category"></h1>
+            <div class="resource">
+                <!-- resource data goes here -->
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"
+        integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
